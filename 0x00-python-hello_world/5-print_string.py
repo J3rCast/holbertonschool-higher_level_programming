@@ -3,5 +3,4 @@ str = "Holberton School"
 completeString = f"{str}" \
         f"{str}" \
         f"{str}"
-print(f"{completeString}")
-print(str[:9])
+print(f"{completeString}\n", str[:9], sep='')
