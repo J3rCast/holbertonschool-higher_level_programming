@@ -12,3 +12,4 @@
 	* Word_last_2 should contain the last 2 letters of the variable word
 	* Middle_word should contain the value of the variable word without the first and last letters
 * **8-concat_edges.py**: Modify the str variable to print *"object-oriented programming with Python"*, followed by a new line.
+* **9-easter_egg.py**: Prints “The Zen of Python”, by TimPeters, followed by a new line.
