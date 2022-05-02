@@ -7,4 +7,8 @@
 * **4-print_float.py**:  Print the float stored in the variable number with a precision of 2 digits.(Editing a source code)
 * **5-print_string.py**: Print 3 times a string stored in the variable str, followed by its first 9 characters.(Editing a source code)
 * **6-concat.py**: Print Welcome to Holberton School!.(Editing a source code)
-
+* **7-edges.py**: By completing a source code we get:
+	* Word_first_3 should contain the first 3 letters of the variable word
+	* Word_last_2 should contain the last 2 letters of the variable word
+	* Middle_word should contain the value of the variable word without the first and last letters
+* **8-concat_edges.py**: Modify the str variable to print *"object-oriented programming with Python"*, followed by a new line.
