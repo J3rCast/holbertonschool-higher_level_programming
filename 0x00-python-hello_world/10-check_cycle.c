@@ -11,12 +11,15 @@ int check_cycle(listint_t *list)
 {
 	listint_t *temp, *tempNext;
 
-	temp = list;
-	tempNext = list;
+	temp = list->next;
+	tempNext = list->next->next;
 
-	while (list && temp->next && tempNext->next->next)
+	if (!list || !list->next)
+		return (0);
+
+	while (temp && tempNext && tempNext->next)
 	{
-		if (temp->next == tempNext->next->next)
+		if (temp == tempNext)
 			return (1);
 
 		temp = temp->next;
