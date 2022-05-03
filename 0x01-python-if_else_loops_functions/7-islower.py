@@ -2,4 +2,3 @@
 def islower(c):
     if c.islower():
         return True
-    return False
