@@ -11,11 +11,12 @@ int check_cycle(listint_t *list)
 {
 	listint_t *temp, *tempNext;
 
-	temp = list->next;
-	tempNext = list->next->next;
 
 	if (!list || !list->next)
 		return (0);
+
+	temp = list->next;
+	tempNext = list->next->next;
 
 	while (temp && tempNext && tempNext->next)
 	{
