@@ -13,3 +13,6 @@
 	* Middle_word should contain the value of the variable word without the first and last letters
 * **8-concat_edges.py**: Modify the str variable to print *"object-oriented programming with Python"*, followed by a new line.
 * **9-easter_egg.py**: Prints “The Zen of Python”, by TimPeters, followed by a new line.
+* **100-write.py**: Prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line, using write from sys module.
+* **101-compile**: Compiles a Python script file stored in the environment variable $PYFILE.
+* **102-magic_calculation.py**: Write the Python function *def magic_calculation(a, b)*
