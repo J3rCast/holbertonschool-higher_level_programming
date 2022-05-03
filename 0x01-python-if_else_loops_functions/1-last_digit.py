@@ -14,4 +14,4 @@ if number > 0:
         print(f"and is less than 6 and not 0")
 else:
     lastDigit = (number * -1) % 10
-    print(f"Last digit of {number} is -{lastDigit}")
+    print(f"Last digit of {number} is -{lastDigit} and is less than 6 and not 0")
