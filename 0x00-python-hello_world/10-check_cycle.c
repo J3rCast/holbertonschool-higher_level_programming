@@ -9,19 +9,21 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *temp;
+	listint_t *temp, *tempNext;
 
 	temp = list;
+	tempNext = list;
 
 	if (!list)
 		return (0);
 
 	while (temp->next && temp)
 	{
-		if (temp->next == list)
+		if (temp->next == tempNext->next->next)
 			return (1);
 
 		temp = temp->next;
+		tempNext = tempNext->next->next;
 	}
 
 	return (0);
