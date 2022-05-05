@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-import calculator_1 as calculator
-a = 10
-b = 5
-
 if __name__ == "__main__":
-    print(f"10 + 5 = {calculator.add(a, b)}")
-    print(f"10 - 5 = {calculator.sub(a, b)}")
-    print(f"10 * 5 = {calculator.mul(a, b)}")
-    print(f"10 / 5 = {calculator.div(a, b)}")
+    from calculator_1 import add, sub, mul, div
+
+    a = 10
+    b = 5
+
+    print(f"{a} + {b} = {add(a, b)}")
+    print(f"{a} - {b} = {sub(a, b)}")
+    print(f"{a} * {b} = {mul(a, b)}")
+    print(f"{a} / {b} = {div(a, b)}")
