@@ -4,11 +4,7 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     from sys import argv
 
-    # VARIABLES
-    a = argv[1]
-    b = argv[3]
-
-    # CODE
+    # CONDITIONALS
     if len(argv) != 4:
         print(f"Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
@@ -16,6 +12,11 @@ if __name__ == "__main__":
         print(f"Unknown operator. Available operators: +, -, * and /")
         exit(1)
 
+    # VARIABLES
+    a = argv[1]
+    b = argv[3]
+
+    # CODE
     if argv[2] == '+':
         print(f"{a} + {b} = {add(int(a), int(b))}")
     if argv[2] == '-':
