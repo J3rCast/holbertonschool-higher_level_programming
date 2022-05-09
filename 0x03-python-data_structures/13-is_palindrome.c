@@ -10,34 +10,26 @@
 int is_palindrome(listint_t **head)
 {
 	int listSize = 0, i = 0;
-	int *data = 0;
-	int *dataReversed = 0;
+	int *dataReversed = 0, *data = 0;
 
 	if (head == NULL)
-        	return (0);
-
+		return (0);
 	listint_t *temp;
 
 	temp = *head;
-
 	while (temp != NULL)
 	{
 		temp = temp->next;
 		listSize++;
 	}
-    
 	data = malloc(sizeof(int) * listSize + 1);
 	if (!data)
 		return (1);
-    
 	dataReversed = malloc(sizeof(int) * listSize + 1);
 	if (!dataReversed)
 	return (1);
-    
 	listSize--;
-
 	temp = *head;
-
 	while (temp != NULL)
 	{
 		data[i] = temp->n;
@@ -49,7 +41,7 @@ int is_palindrome(listint_t **head)
 	data[i] = '\0';
 	dataReversed[i] = '\0';
 	i = 0;
-	while(data[i] == dataReversed[i])
+	while (data[i] == dataReversed[i])
 	{
 		if (!data[i] || !dataReversed[i])
 			return (1);
