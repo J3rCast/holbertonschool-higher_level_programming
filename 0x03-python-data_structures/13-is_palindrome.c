@@ -44,8 +44,14 @@ int is_palindrome(listint_t **head)
 	while (data[i] == dataReversed[i])
 	{
 		if (!data[i] || !dataReversed[i])
+		{
+			free(data);
+			free(dataReversed);
 			return (1);
+		}
 		i++;
 	}
+	free(data);
+	free(dataReversed);
 	return (0);
 }
