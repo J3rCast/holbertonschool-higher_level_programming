@@ -27,7 +27,7 @@ int is_palindrome(listint_t **head)
 		return (1);
 	dataReversed = malloc(sizeof(int) * listSize + 1);
 	if (!dataReversed)
-	return (1);
+		return (1);
 	listSize--;
 	temp = *head;
 	while (temp != NULL)
