@@ -2,14 +2,25 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
+ * frees - frees data
+ * @data: firs intput to free
+ * @dataReversed: second intput to free
+ */
+void frees(int *data, int *dataReversed)
+{
+	free(data);
+	free(dataReversed);
+}
+/**
  * reverse - reverse a linked list
  *
  * @head: header of the lintked list
  * @listSize: Size of the linked list
+ * @data: data to free if malloc fails
  *
  * Return: an array of ints reversed
  */
-int *reverse(listint_t **head, int listSize)
+int *reverse(listint_t **head, int listSize, int *data)
 {
 	int *dataReversed = 0;
 
@@ -17,9 +28,12 @@ int *reverse(listint_t **head, int listSize)
 
 	temp = *head;
 
-	dataReversed = malloc(sizeof(int) * listSize + 1);
+	dataReversed = (int *)calloc(listSize + 40, sizeof(int));
 	if (!dataReversed)
+	{
+		free(data);
 		return (NULL);
+	}
 
 	while (temp != NULL)
 	{
@@ -50,7 +64,7 @@ int is_palindrome(listint_t **head)
 		temp = temp->next;
 		listSize++;
 	}
-	data = malloc(sizeof(int) * listSize + 1);
+	data = (int *)calloc(listSize + 1, sizeof(int));
 	if (!data)
 		return (1);
 	listSize--;
@@ -61,19 +75,17 @@ int is_palindrome(listint_t **head)
 		temp = temp->next;
 		i++;
 	}
-	dataReversed = reverse(head, listSize);
+	dataReversed = reverse(head, listSize, data);
 	data[i] = '\0', dataReversed[i] = '\0', i = 0;
 	while (data[i] == dataReversed[i])
 	{
 		if (!data[i] || !dataReversed[i])
 		{
-			free(data);
-			free(dataReversed);
+			frees(data, dataReversed);
 			return (1);
 		}
 		i++;
 	}
-	free(data);
-	free(dataReversed);
+	frees(data, dataReversed);
 	return (0);
 }
