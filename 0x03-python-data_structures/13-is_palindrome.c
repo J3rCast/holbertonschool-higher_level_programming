@@ -2,6 +2,34 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
+ * reverse - reverse a linked list
+ *
+ * @head: header of the lintked list
+ * @listSize: Size of the linked list
+ *
+ * Return: an array of ints reversed
+ */
+int *reverse(listint_t **head, int listSize)
+{
+	int *dataReversed = 0;
+
+	listint_t *temp;
+
+	temp = *head;
+
+	dataReversed = malloc(sizeof(int) * listSize + 1);
+	if (!dataReversed)
+		return (NULL);
+
+	while (temp != NULL)
+	{
+		dataReversed[listSize] = temp->n;
+		temp = temp->next;
+		listSize--;
+	}
+	return (dataReversed);
+}
+/**
  * is_palindrome - checks if a singly linked list is a palindrome
  * @head: linked list
  *
@@ -25,22 +53,16 @@ int is_palindrome(listint_t **head)
 	data = malloc(sizeof(int) * listSize + 1);
 	if (!data)
 		return (1);
-	dataReversed = malloc(sizeof(int) * listSize + 1);
-	if (!dataReversed)
-		return (1);
 	listSize--;
 	temp = *head;
 	while (temp != NULL)
 	{
 		data[i] = temp->n;
-		dataReversed[listSize] = temp->n;
 		temp = temp->next;
 		i++;
-		listSize--;
 	}
-	data[i] = '\0';
-	dataReversed[i] = '\0';
-	i = 0;
+	dataReversed = reverse(head, listSize);
+	data[i] = '\0', dataReversed[i] = '\0', i = 0;
 	while (data[i] == dataReversed[i])
 	{
 		if (!data[i] || !dataReversed[i])
