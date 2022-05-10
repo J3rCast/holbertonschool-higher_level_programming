@@ -54,9 +54,10 @@ int is_palindrome(listint_t **head)
 	int listSize = 0, i = 0;
 	int *dataReversed = 0, *data = 0;
 
+	listint_t *temp;
+
 	if (head == NULL)
 		return (1);
-	listint_t *temp;
 
 	temp = *head;
 	while (temp != NULL)
