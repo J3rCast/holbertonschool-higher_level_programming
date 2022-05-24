@@ -60,7 +60,7 @@ class Square:
         rows = 0
         columns = 0
         if self.__size == 0:
-            print()
+            square = "\n"
         else:
             for i in range(self.__position[1]):
                 square = square + "\n"
@@ -70,7 +70,8 @@ class Square:
                 while rows < self.__size:
                     square = square + "#"
                     rows += 1
-                square = square + "\n"
+                if columns < self.__size - 1:
+                    square = square + "\n"
                 rows = 0
                 columns += 1
         return square
