@@ -54,21 +54,23 @@ class Square:
             raise TypeError
         self.__position = value
 
-    def my_print(self):
+    def __str__(self):
         """print a square based on size"""
+        square = ""
         rows = 0
         columns = 0
         if self.__size == 0:
             print()
         else:
             for i in range(self.__position[1]):
-                print()
+                square = square + "\n"
             while columns < self.__size:
                 for i in range(self.__position[0]):
-                    print(" ", end="")
+                    square = square + " "
                 while rows < self.__size:
-                    print("#", end="")
+                    square = square + "#"
                     rows += 1
-                print()
+                square = square + "\n"
                 rows = 0
                 columns += 1
+        return square
