@@ -17,7 +17,7 @@ class Square:
         if self.__position[0] < 0 or self.__position[1] < 0 or\
                 type(self.__position[0]) != int or\
                     type(self.__position[1]) != int or len(self.__position) != 2:
-            print("position must be a tuple of 2 positive integers")
+            
             raise TypeError
 
     def area(self):
