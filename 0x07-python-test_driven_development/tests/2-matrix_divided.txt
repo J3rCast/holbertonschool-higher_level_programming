@@ -20,6 +20,10 @@ The ``2-matrix_divided`` module
 		>>> matrix_divided(matrix, 3)
 		[[0.33, 0.67, inf], [1.33, 1.67, 2.0]]
 
+		>>> matrix0 = [[1, 2, 3], [4, 5, 6]]
+		>>> matrix_divided(matrix0, float('inf'))
+		[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
 		>>> matrix1 = [[1, 2, 3], [4, 5, 6]]
 		>>> matrix_divided(matrix1, 3)
 		[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]

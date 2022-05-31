@@ -17,6 +17,8 @@ def matrix_divided(matrix, div):
     result = 0
     new_list = []
     indiv_list = []
+    if div == float('inf'):
+        div = 1
     if type(matrix) is not list:
         raise TypeError("matrix must be a\
  matrix (list of lists) of integers/floats")
