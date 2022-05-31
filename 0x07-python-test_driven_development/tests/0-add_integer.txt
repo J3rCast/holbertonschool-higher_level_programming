@@ -22,6 +22,16 @@ The ``0-add_integer`` module
 	...
 	ValueError: could not convert string to float: 'string'
 
+	>>> add_integer(3, float('string'))
+	Traceback (most recent call last):
+	...
+	ValueError: could not convert string to float: 'string'
+
+	>>> add_integer(float("string"), float("string"))
+	Traceback (most recent call last):
+	...
+	ValueError: could not convert string to float: 'string'
+
 	>>> add_integer()
 	Traceback (most recent call last):
 	...
