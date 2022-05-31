@@ -7,6 +7,9 @@ properties defined
 
 class Rectangle:
     """This is a simple class"""
+
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         if type(width) is not int:
             raise TypeError("width must be an integer")
@@ -18,6 +21,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = height
         self.__width = width
+        Rectangle.number_of_instances += 1
 
     def area(self):
         """Return the area of the rectangle."""
@@ -43,6 +47,17 @@ class Rectangle:
             if heig < self.__height - 1:
                 rect += "\n"
         return rect
+
+    def __repr__(self):
+        """This method is called when repr() is used"""
+        represetation = "Rectangle(" + str(self.__width)\
+            + ", " + str(self.__height) + ")"
+        return represetation
+
+    def __del__(self):
+        """This method is used when a instance is deleted"""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
 
     @property
     def width(self):

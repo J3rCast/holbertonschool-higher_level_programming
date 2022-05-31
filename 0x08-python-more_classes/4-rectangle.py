@@ -40,7 +40,8 @@ class Rectangle:
         for heig in range(self.__height):
             for wid in range(self.__width):
                 rect += "#"
-            rect += "\n"
+            if heig < self.__height - 1:
+                rect += "\n"
         return rect
 
     def __repr__(self):
