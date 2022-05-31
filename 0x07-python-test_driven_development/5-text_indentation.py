@@ -10,11 +10,11 @@ def text_indentation(text):
             text: string to be indented
 
         Returns:
-            Error: is text is not a string
+            Error: if text is not a string
             Otherwise: prints new indented string
     """
     i = 0
-    if type(text) is not str or text == "":
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
     while i < len(text):
