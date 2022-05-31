@@ -14,7 +14,7 @@ def text_indentation(text):
             Otherwise: prints new indented string
     """
     i = 0
-    if type(text) is not str:
+    if type(text) is not str or text == "":
         raise TypeError("text must be a string")
 
     while i < len(text):
