@@ -16,7 +16,12 @@ The ``0-add_integer`` module
 	Traceback (most recent call last):
 	...
 	OverflowError: cannot convert float infinity to integer
-	
+
+	>>> add_integer(float('string'))
+	Traceback (most recent call last):
+	...
+	ValueError: could not convert string to float: 'string'
+
 	>>> add_integer()
 	Traceback (most recent call last):
 	...
