@@ -5,9 +5,6 @@ properties defined
 """
 
 
-from ast import Return
-
-
 class Rectangle:
     """This is a simple class"""
 
