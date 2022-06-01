@@ -5,10 +5,6 @@ properties defined
 """
 
 
-from ast import Return
-from curses.textpad import rectangle
-
-
 class Rectangle:
     """This is a simple class"""
 
