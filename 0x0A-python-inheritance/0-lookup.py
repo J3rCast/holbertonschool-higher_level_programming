@@ -1,5 +1,6 @@
 #!/usr/bin/pythn3
-"""This module has a function that
+"""
+This module has a function that
 return a list of attributes and methods
 of and object
 """
