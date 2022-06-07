@@ -3,10 +3,10 @@
 
 	>>> MyList = __import__('1-my_list').MyList
 
-	>>> my_list = MyList([5, 3], 23)
+	>>> my_list = MyList([5, float['inf']])
 	Traceback (most recent call last):
 	...
-	TypeError: list expected at most 1 argument, got 2
+	TypeError: 'type' object is not subscriptable
 
 	>>> my_list = MyList([2, 3, 1])
 	>>> my_list.print_sorted()
