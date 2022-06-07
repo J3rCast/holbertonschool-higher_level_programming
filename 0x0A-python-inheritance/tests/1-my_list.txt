@@ -37,6 +37,6 @@
 	>>> my_list.print_sorted()
 	[None]
 
-	>>> my_list = MyList()
+	>>> my_list = MyList([-1, 0, -4])
 	>>> my_list.print_sorted()
-	[]
+	[-4, -1, 0]
