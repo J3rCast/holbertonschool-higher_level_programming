@@ -12,6 +12,10 @@
 	>>> my_list.print_sorted()
 	[1, 2, 3]
 
+	>>> my_list = MyList([0, 0, 0, 0])
+	>>> my_list.print_sorted()
+	[0, 0, 0, 0]
+
 	>>> my_list = MyList([2, 3, 1, 5, 7, 9, -1])
 	>>> my_list.print_sorted()
 	[-1, 1, 2, 3, 5, 7, 9]
