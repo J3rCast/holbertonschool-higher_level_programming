@@ -1,4 +1,4 @@
-#!/usr/bin/pythn3
+#!/usr/bin/python3
 """This module has a function that
 returns True if the object is an instance of,
 or if the object is an instance of a class that inherited from,

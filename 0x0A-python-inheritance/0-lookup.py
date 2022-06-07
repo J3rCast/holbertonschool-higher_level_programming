@@ -7,7 +7,7 @@ of and object
 
 
 def lookup(obj):
-    """ 
+    """
         Arguments:
             obj: object to list
 
