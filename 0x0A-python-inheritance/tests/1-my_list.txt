@@ -91,7 +91,3 @@
 	>>> my_list = MyList([None])
 	>>> my_list.print_sorted()
 	[None]
-
-	>>> my_list = MyList([-2, -1, -4])
-	>>> my_list.print_sorted()
-	[-4, -2, -1]
