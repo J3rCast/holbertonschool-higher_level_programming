@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module contains Student 
+"""This module contains Student
 that defines a student by:
 """
 
