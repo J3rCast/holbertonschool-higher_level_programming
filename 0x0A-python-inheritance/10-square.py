@@ -49,4 +49,4 @@ class Square(Rectangle):
         """This method initialize the class"""
         super().integer_validator("size", size)
         super().__init__(size, size)
-        self._Square__size = size
+        self.__size = size
