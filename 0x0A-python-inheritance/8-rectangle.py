@@ -2,8 +2,10 @@
 """This module conains a class called BaseGeometry
 """
 
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 """Imports a class from another file"""
+
 
 class Rectangle(BaseGeometry):
     """This is child class that defines a
