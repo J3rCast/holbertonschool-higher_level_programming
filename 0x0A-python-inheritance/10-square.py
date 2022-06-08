@@ -22,13 +22,12 @@ class Rectangle(BaseGeometry):
     """This method is child class that defines a
     Rectangel
     """
-
     def __init__(self, width, height):
         """This method initialize the class"""
         super().integer_validator("width", width)
         super().integer_validator("height", height)
-        self.__width = width
-        self.__height = height
+        self._Rectangle__width = width
+        self._Rectangle__height = height
 
     def area(self):
         """This method return the area"""
