@@ -30,6 +30,11 @@
 	>>> my_list.print_sorted()
 	[-5, -4, -3, -2, -1]
 
+	>>> my_list = MyList(6)
+	Traceback (most recent call last):
+	...
+	TypeError: 'int' object is not iterable
+
 	>>> my_list = MyList()
 	>>> my_list.append("-1")
 	>>> my_list.append(-4)
