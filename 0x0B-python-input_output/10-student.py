@@ -23,8 +23,10 @@ class Student:
         new_dict = {}
         if attrs and type(attrs) is list:
             for i in attrs:
+                if type(i) is not str:
+                    return self.__dict__
                 if hasattr(self, i):
                     new_dict[i] = getattr(self, i)
             return new_dict
 
-        return (self.__dict__)
+        return self.__dict__
