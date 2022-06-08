@@ -6,12 +6,8 @@ boolean) for JSON serialization of an object:
 """
 
 
-import json
-"""Import the json module"""
-
-
 def class_to_json(obj):
     """ Arguments:
         obj - object
     """
-    return json.dumps(obj.__dict__)
+    return obj.__dict__
