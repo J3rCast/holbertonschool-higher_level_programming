@@ -31,7 +31,7 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         """This method return the area"""
-        return self.__width * self.__height
+        return self._Rectangle__width * self._Rectangle__height
 
     def __str__(self):
         """This method is called when "print" or "str"
@@ -49,4 +49,4 @@ class Square(Rectangle):
         """This method initialize the class"""
         super().integer_validator("size", size)
         super().__init__(size, size)
-        self.__size = size
+        self._Square__size = size
