@@ -21,8 +21,9 @@ class Student:
             retrieves a dictionary representation of a Student instance
         """
         new_dict = {}
-        if attrs and type(attrs) is list:  
-            if all(type(i) is str for i in attrs):
+        if type(attrs) is list:
+            if all(type(i) is str for i in attrs) and\
+                len(attrs) != 0:
                 for i in attrs:
                     if hasattr(self, i):
                         new_dict[i] = getattr(self, i)
