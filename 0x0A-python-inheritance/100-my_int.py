@@ -11,11 +11,8 @@ class MyInt(int):
 
     def __init__(self, integer):
         """This initialize the class"""
-        self.__integer = integer
+        self._MyInt__integer = integer
 
     def __eq__(self, other):
         """This method return a boolean"""
-        if type(self) == type(other):
-            return False
-        if type(self) != type(other):
-            return True
+        return not type(self) == type(other)
