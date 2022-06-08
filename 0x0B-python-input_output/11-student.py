@@ -34,5 +34,5 @@ class Student:
         """
             replaces all attributes of the Student instance
         """
-        for i in self.__dict__:
+        for i in json:
             self.__dict__[i] = json[i]
