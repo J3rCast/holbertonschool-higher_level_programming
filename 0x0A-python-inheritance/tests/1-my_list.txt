@@ -3,6 +3,10 @@
 
 	>>> MyList = __import__('1-my_list').MyList
 
+	>>> mod = __import__("1-my_list").MyList.print_sorted.__doc__
+	 >>> len(mod) > 1
+	 True
+
 	>>> my_list = MyList()
 	>>> my_list.append(1)
 	>>> my_list.append(4)
