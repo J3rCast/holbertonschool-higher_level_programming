@@ -22,8 +22,7 @@ class Student:
         """
         new_dict = {}
         if type(attrs) is list:
-            if all(type(i) is str for i in attrs) and\
-                len(attrs) != 0:
+            if all(type(i) is str for i in attrs):
                 for i in attrs:
                     if hasattr(self, i):
                         new_dict[i] = getattr(self, i)
