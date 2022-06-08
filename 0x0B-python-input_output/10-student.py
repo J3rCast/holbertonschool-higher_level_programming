@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module contains Student 
+"""This module contains Student
 that defines a student by:
 """
 
@@ -16,8 +16,15 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """
             retrieves a dictionary representation of a Student instance
         """
+        new_dict = {}
+        if attrs and type(attrs) is list:
+            for i in attrs:
+                if hasattr(self, i):
+                    new_dict[i] = getattr(self, i)
+            return new_dict
+
         return (self.__dict__)
