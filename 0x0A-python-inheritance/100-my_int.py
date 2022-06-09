@@ -9,9 +9,19 @@ class MyInt(int):
     != operators inverted
     """
 
+    def __init__(self, value):
+        """Initialize the class"""
+        self.__value = value
+
     def __eq__(self, other):
         """This method return a boolean"""
-        return False
+        if self.__value == other:
+            return False
+        if self.__value != other:
+            return True
 
     def __ne__(self, other):
-        return True
+        if self.__value != other:
+            return False
+        if self.__value == other:
+            return True
