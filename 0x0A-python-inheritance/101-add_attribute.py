@@ -4,9 +4,10 @@ that adds a new attribute to an object if
  its possible
  """
 
+
 def add_attribute(obj, name, value):
     """This function adds a new attribute"""
-    if hasattr(obj, name) is False:
+    if hasattr(obj, "__dict__") is False:
         raise TypeError("can't add new attribute")
 
     setattr(obj, name, value)
