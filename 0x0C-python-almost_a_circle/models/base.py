@@ -71,7 +71,7 @@ class Base():
         already set.
         """
         from models.rectangle import Rectangle
-        new_inst = Rectangle(1, 1)
+        new_inst = Rectangle(width=1,height=1)
         new_inst.update(**dictionary)
         return new_inst
 
