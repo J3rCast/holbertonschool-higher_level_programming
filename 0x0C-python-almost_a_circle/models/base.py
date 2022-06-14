@@ -85,7 +85,14 @@ class Base():
         import json
         new_list = []
         file_name = cls.__name__ + '.json'
-        try:
-            json_ret = cls.from_json_string(json.load(file_name))
-        except Exception:
-            return new_list
+
+        with open(file_name, "r", encoding="utf-8") as f:
+            json_ret = f.read()
+
+        ret = cls.from_json_string(json_ret)
+
+        for i in ret:
+            r = cls.create(**i)
+            new_list.append(r)
+
+        return new_list
