@@ -83,5 +83,5 @@ class Base():
         file_name = cls.__name__ + '.json'
         try:
             json_ret = from_json_string(json.load(file_name))
-        except:
+        except Exception:
             return new_list
