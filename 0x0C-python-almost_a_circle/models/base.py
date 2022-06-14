@@ -85,5 +85,3 @@ class Base():
             json_ret = from_json_string(json.load(file_name))
         except:
             return new_list
-
-        for i in 
