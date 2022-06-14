@@ -70,8 +70,12 @@ class Base():
         """Returns an instance with all attributes
         already set.
         """
+        from models.square import Square
         from models.rectangle import Rectangle
-        new_inst = Rectangle(width=1,height=1)
+        if 'size' in dictionary:
+            new_inst = Square(size=1)
+        elif 'width' in dictionary:
+            new_inst = Rectangle(width=1, height=1)
         new_inst.update(**dictionary)
         return new_inst
 
@@ -82,6 +86,6 @@ class Base():
         new_list = []
         file_name = cls.__name__ + '.json'
         try:
-            json_ret = from_json_string(json.load(file_name))
+            json_ret = cls.from_json_string(json.load(file_name))
         except Exception:
             return new_list
