@@ -32,7 +32,7 @@ class Rectangle(Base):
 
     @staticmethod
     def size_validator(name, value):
-        """validates the size
+        """Validates the size
 
         Args:
             name (str): name of the value to validate
@@ -49,7 +49,7 @@ class Rectangle(Base):
 
     @staticmethod
     def axis_validator(name, value):
-        """validate the axis
+        """Validate the axis
 
         Args:
             name (str): name of the value to validate
@@ -91,10 +91,7 @@ class Rectangle(Base):
         Args:
             value (int): New value to set
         """
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
+        self.size_validator('width', value)
         self.__width = value
 
     @height.setter
@@ -104,10 +101,7 @@ class Rectangle(Base):
         Args:
             value (int): New value to set
         """
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        if value <= 0:
-            raise ValueError("height must be > 0")
+        self.size_validator('height', value)
         self.__height = value
 
     @x.setter
@@ -117,10 +111,7 @@ class Rectangle(Base):
         Args:
             value (int): New value to set
         """
-        if type(value) is not int:
-            raise TypeError("x must be an integer")
-        if value < 0:
-            raise ValueError("x must be > 0")
+        self.axis_validator('x', value)
         self.__x = value
 
     @y.setter
@@ -130,10 +121,7 @@ class Rectangle(Base):
         Args:
             value (int): New value to set
         """
-        if type(value) is not int:
-            raise TypeError("y must be an integer")
-        if value < 0:
-            raise ValueError("y must be > 0")
+        self.axis_validator('y', value)
         self.__y = value
 
     def area(self):
