@@ -54,12 +54,62 @@ class TestSquareMethods(unittest.TestCase):
     def testStrMethod(self):
         """Test the str magic method"""
         s1 = Square(5)
-        corret = "[Square] (14) 0/0 - 5\n"
+        corret = "[Square] (17) 0/0 - 5\n"
         with patch('sys.stdout', new=StringIO()) as f:
             print(s1)
             self.assertEqual(f.getvalue(), corret)
         s2 = Square(2, 2)
-        corret = "[Square] (15) 2/0 - 2\n"
+        corret = "[Square] (18) 2/0 - 2\n"
         with patch('sys.stdout', new=StringIO()) as f:
             print(s2)
             self.assertEqual(f.getvalue(), corret)
+
+    def testDisplayMethod(self):
+        """Test the Display method."""
+        s1 = Square(2)
+        with open('square_correct.txt', mode="r") as f:
+            corret = f.read()
+
+        with patch('sys.stdout', new=StringIO()) as f:
+            s1.display()
+            self.assertEqual(f.getvalue(), corret)
+
+    def testDisplayAxisMethod(self):
+        """Test the Display method."""
+        s1 = Square(2, 3, 2)
+        with open('square_correct_axis.txt', mode="r") as f:
+            corret = f.read()
+
+        with patch('sys.stdout', new=StringIO()) as f:
+            s1.display()
+            self.assertEqual(f.getvalue(), corret)
+
+    def testUpdateMethod(self):
+        """Test the update method."""
+        s1 = Square(5)
+        s1.update(10)
+        correct = "[Square] (10) 0/0 - 5\n"
+
+        with patch('sys.stdout', new=StringIO()) as f:
+            print(s1)
+            self.assertEqual(f.getvalue(), correct)
+
+    def testUpdateKwargsMethod(self):
+        """Test the update with kwargs method."""
+        r1 = Square(10)
+        r1.update(size=89)
+        correct = "[Square] (20) 0/0 - 89\n"
+
+        with patch('sys.stdout', new=StringIO()) as f:
+            print(r1)
+            self.assertEqual(f.getvalue(), correct)
+
+    def testToDict(self):
+        """Test the toDictionary method."""
+        s1 = Square(10, 2, 1)
+        s1_dictionary = s1.to_dictionary()
+        correct = "{'id': 19, 'x': 2, 'size': 10, 'y': 1}\n"
+
+        with patch('sys.stdout', new=StringIO()) as f:
+            print(s1_dictionary)
+            self.assertEqual(f.getvalue(), correct)
