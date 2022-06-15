@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module is the unitest for base"""
+"""This module is the unitest for rectangle"""
 
 
 import unittest
