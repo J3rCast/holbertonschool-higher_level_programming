@@ -99,3 +99,44 @@ class Base():
             new_list.append(r)
 
         return new_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """that writes the JSON string representation of list_objs
+        to a file.
+
+        Args:
+            list_objs: is a list of instances who inherits of Base
+        """
+        file_name = cls.__name__ + '.csv'
+
+        with open(file_name, "w", encoding="utf-8") as f:
+            if not list_objs:
+                f.write("[]")
+            else:
+                list_dict = []
+                for i in list_objs:
+                    list_dict.append(i.to_dictionary())
+
+                f.write(i.to_json_string(list_dict))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Returns a list of instances."""
+        import json
+        new_list = []
+        file_name = cls.__name__ + '.csv'
+
+        try:
+            with open(file_name, "r", encoding="utf-8") as f:
+                json_ret = f.read()
+        except Exception:
+            return new_list
+
+        ret = cls.from_json_string(json_ret)
+
+        for i in ret:
+            r = cls.create(**i)
+            new_list.append(r)
+
+        return new_list
