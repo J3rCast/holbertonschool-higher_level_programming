@@ -90,5 +90,42 @@ class TestRectangleMethods(unittest.TestCase):
             r1.display()
             self.assertEqual(f.getvalue(), corret)
 
+    def testUpdateMethod(self):
+        """Test the update method."""
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(89)
+        correct = "[Rectangle] (89) 10/10 - 10/10\n"
+
+        with patch('sys.stdout', new=StringIO()) as f:
+            print(r1)
+            self.assertEqual(f.getvalue(), correct)
+
+        r2 = Rectangle(10, 10, 10, 10)
+        r2.update(89, 2)
+        correct = "[Rectangle] (89) 10/10 - 2/10\n"
+
+        with patch('sys.stdout', new=StringIO()) as f:
+            print(r2)
+            self.assertEqual(f.getvalue(), correct)
+
+    def testUpdateKwargsMethod(self):
+        """Test the update with kwargs method."""
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(height=89)
+        correct = "[Rectangle] (8) 10/10 - 10/89\n"
+
+        with patch('sys.stdout', new=StringIO()) as f:
+            print(r1)
+            self.assertEqual(f.getvalue(), correct)
+
+        r2 = Rectangle(10, 10, 10, 10)
+        r2.update(height=89,x=2, id=89)
+        correct = "[Rectangle] (89) 2/10 - 10/89\n"
+
+        with patch('sys.stdout', new=StringIO()) as f:
+            print(r2)
+            self.assertEqual(f.getvalue(), correct)
+
+
 if __name__ == '__main__':
     unittest.main()
