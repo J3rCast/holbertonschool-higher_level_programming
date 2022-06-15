@@ -21,5 +21,16 @@ class TestBaseMethods(unittest.TestCase):
         print(b2.id)
         mock_print.assert_called_with(2)
 
+    def testToJsonString(self):
+        """Test of toJsonString method."""
+        r1 = Rectangle(10, 7, 2, 8)
+        dictionary = r1.to_dictionary()
+        json_dictionary = Base.to_json_string([dictionary])
+        correct = "[{\"x\": 2, \"y\": 8, \"id\": 3, \"height\": 7, \"width\": 10}]\n"
+
+        with patch('sys.stdout', new=StringIO()) as f:
+            print(json_dictionary)
+            self.assertEqual(f.getvalue(), correct)
+
 if __name__ == '__main__':
     unittest.main()

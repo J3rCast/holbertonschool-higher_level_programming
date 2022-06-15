@@ -54,12 +54,12 @@ class TestSquareMethods(unittest.TestCase):
     def testStrMethod(self):
         """Test the str magic method"""
         s1 = Square(5)
-        corret = "[Square] (17) 0/0 - 5\n"
+        corret = "[Square] (18) 0/0 - 5\n"
         with patch('sys.stdout', new=StringIO()) as f:
             print(s1)
             self.assertEqual(f.getvalue(), corret)
         s2 = Square(2, 2)
-        corret = "[Square] (18) 2/0 - 2\n"
+        corret = "[Square] (19) 2/0 - 2\n"
         with patch('sys.stdout', new=StringIO()) as f:
             print(s2)
             self.assertEqual(f.getvalue(), corret)
@@ -98,7 +98,7 @@ class TestSquareMethods(unittest.TestCase):
         """Test the update with kwargs method."""
         r1 = Square(10)
         r1.update(size=89)
-        correct = "[Square] (20) 0/0 - 89\n"
+        correct = "[Square] (21) 0/0 - 89\n"
 
         with patch('sys.stdout', new=StringIO()) as f:
             print(r1)
@@ -108,7 +108,7 @@ class TestSquareMethods(unittest.TestCase):
         """Test the toDictionary method."""
         s1 = Square(10, 2, 1)
         s1_dictionary = s1.to_dictionary()
-        correct = "{'id': 19, 'x': 2, 'size': 10, 'y': 1}\n"
+        correct = "{'id': 20, 'x': 2, 'size': 10, 'y': 1}\n"
 
         with patch('sys.stdout', new=StringIO()) as f:
             print(s1_dictionary)

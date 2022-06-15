@@ -65,7 +65,7 @@ class TestRectangleMethods(unittest.TestCase):
             print(r1)
             self.assertEqual(f.getvalue(), corret)
         r2 = Rectangle(4, 6)
-        corret = "[Rectangle] (7) 0/0 - 4/6\n"
+        corret = "[Rectangle] (8) 0/0 - 4/6\n"
         with patch('sys.stdout', new=StringIO()) as f:
             print(r2)
             self.assertEqual(f.getvalue(), corret)
@@ -112,7 +112,7 @@ class TestRectangleMethods(unittest.TestCase):
         """Test the update with kwargs method."""
         r1 = Rectangle(10, 10, 10, 10)
         r1.update(height=89)
-        correct = "[Rectangle] (9) 10/10 - 10/89\n"
+        correct = "[Rectangle] (10) 10/10 - 10/89\n"
 
         with patch('sys.stdout', new=StringIO()) as f:
             print(r1)
@@ -130,7 +130,7 @@ class TestRectangleMethods(unittest.TestCase):
         """Test the toDictionary method."""
         r1 = Rectangle(10, 2, 1, 9)
         r1_dictionary = r1.to_dictionary()
-        correct = "{'x': 1, 'y': 9, 'id': 8, 'height': 2, 'width': 10}\n"
+        correct = "{'x': 1, 'y': 9, 'id': 9, 'height': 2, 'width': 10}\n"
 
         with patch('sys.stdout', new=StringIO()) as f:
             print(r1_dictionary)
