@@ -32,12 +32,11 @@ class TestBaseMethods(unittest.TestCase):
             print(json_dictionary)
             self.assertEqual(f.getvalue(), correct)
 
-        json_dictionary = Base.to_json_string([])
-        correct = "[]\n"
+    def testToJsonStringEmpty(self):
+        """Test of toJsonString with emptyy list."""
+        json_dict = Base.to_json_string([])
+        self.assertEqual(json_dict, "[]")
 
-        with patch('sys.stdout', new=StringIO()) as f:
-            print(json_dictionary)
-            self.assertEqual(f.getvalue(), correct)
 
 if __name__ == '__main__':
     unittest.main()
