@@ -81,3 +81,49 @@
 <li><code>id</code> = 4, <code>name</code> = “George”, <code>score</code> = 8</li>
 </ul></li>
 
+<code>10-top_score.sql:</code>
+<p>Write a script that lists all records of the table <code>second_table</code> of the database <code>hbtn_0c_0</code> in your MySQL server.</p>
+<li>Results should display both the score and the name (in this order)</li>
+<li>Records should be ordered by score (top first) </li>
+<li>The database name will be passed as an argument of the <code>mysql</code> command</li>
+
+<code>11-best_score.sql:</code>
+<p>Write a script that lists all records with a <code>score &gt;= 10</code> in the table <code>second_table</code> of the database <code>hbtn_0c_0</code> in your MySQL server.</p>
+
+<li>Results should display both the score and the name (in this order)</li>
+<li>Records should be ordered by score (top first)</li>
+<li>The database name will be passed as an argument of the <code>mysql</code> command</li>
+
+<code>12-no_cheating.sql:</code>
+<p>Write a script that updates the score of Bob to <code>10</code> in the table <code>second_table</code>.</p>
+<li>You are not allowed to use Bob’s id value, only the <code>name</code> field</li>
+<li>The database name will be passed as an argument of the <code>mysql</code> command</li>
+
+<code>13-change_class.sql</code>
+<p>Write a script that removes all records with a <code>score &lt;= 5</code> in the table <code>second_table</code> of the database <code>hbtn_0c_0</code> in your MySQL server.</p>
+<li>The database name will be passed as an argument of the <code>mysql</code> command</li>
+
+<code>14-average.sql:</code>
+<p>Write a script that computes the score average of all records in the table <code>second_table</code> of the database <code>hbtn_0c_0</code> in your MySQL server.</p>
+<li>The result column name should be <code>average</code></li>
+<li>The database name will be passed as an argument of the <code>mysql</code> command</li>
+
+<code>15-groups.sql:</code>
+<p>Write a script that lists the number of records with the same score in the table <code>second_table</code> of the database <code>hbtn_0c_0</code> in your MySQL server.</p>
+<li>The result should display:
+<ul>
+<li>the <code>score</code></li>
+<li>the number of records for this <code>score</code> with the label <code>number</code></li>
+</ul></li>
+<li>The list should be sorted by the number of records (descending)</li>
+<li>The database name will be passed as an argument to the <code>mysql</code> command</li>
+
+<code>16-no_link.sql:</code>
+<p>Write a script that lists all records of the table <code>second_table</code> of the database <code>hbtn_0c_0</code> in your MySQL server.</p>
+
+<li>Don’t list rows without a <code>name</code> value</li>
+<li>Results should display the score and the name (in this order)</li>
+<li>Records should be listed by descending score </li>
+<li>The database name will be passed as an argument to the <code>mysql</code> command</li>
+
+
