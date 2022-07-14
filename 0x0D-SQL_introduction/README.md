@@ -15,10 +15,10 @@
 </ul>
 <code>3-force_name.sql:</code> <p>Write a script that creates the table force_name on your MySQL server.</p>
 <lu>
-	<li><lu>force_name description:</li>
+	<li><lu>force_name description:
         	<li>id INT</li>
         	<li>name VARCHAR(256) can’t be null</li>
-	</lu>
+	</lu></li>
     	<li>The database name will be passed as an argument of the mysql command</li>
     	<li>If the table force_name already exists, your script should not fail</li>
 </lu>
