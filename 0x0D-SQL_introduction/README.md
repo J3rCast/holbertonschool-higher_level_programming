@@ -15,7 +15,7 @@
 </ul>
 <code>3-force_name.sql:</code> <p>Write a script that creates the table force_name on your MySQL server.</p>
 <lu>
-	<lu>force_name description:
+	<li><lu>force_name description:</li>
         	<li>id INT</li>
         	<li>name VARCHAR(256) can’t be null</li>
 	</lu>
