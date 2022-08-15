@@ -1,5 +1,3 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
-
-const string = argv[2] + ' is ' + argv[3];
+const string = process.argv[2] + ' is ' + process.argv[3];
 console.log(string);
