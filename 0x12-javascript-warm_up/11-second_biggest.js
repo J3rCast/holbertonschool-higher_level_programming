@@ -17,5 +17,5 @@ else {
     if (args[i] < max && args[i] > args[i - 1]) res = args[i];
     i++;
   }
-  console.log(res);
+  console.log(parseInt(res));
 }
