@@ -24,7 +24,7 @@ i = 2;
 if (!args[2] || !args[3]) console.log(0);
 else {
   while (i < len) {
-    if (args[i] <= args[maxIndex] && args[i] > temp && i !== maxIndex) {
+    if (args[i] < args[maxIndex] && args[i] > temp && i !== maxIndex) {
       temp = args[i];
       res = args[i];
     }
