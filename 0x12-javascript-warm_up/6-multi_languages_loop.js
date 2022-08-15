@@ -1,7 +1,5 @@
 #!/usr/bin/node
-let i = 0;
 const strings = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-while (i < 3) {
+for (let i = 0; i < 3; i++) {
   console.log(strings[i]);
-  i++;
 }
