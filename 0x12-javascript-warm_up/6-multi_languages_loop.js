@@ -1,4 +1,6 @@
 #!/usr/bin/node
-console.log('C is fun');
-console.log('Python is cool');
-console.log('JavaScript is amazing');
+const languages = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+let i;
+for (i = 0; languages[i]; i++) {
+  console.log(languages[i]);
+}
