@@ -12,7 +12,10 @@ for (i = 2; i < len; i++) {
 }
 
 for (i = 2; i < len; i++) {
-  if (args[i] > temp) temp = args[i], maxIndex = i;
+  if (args[i] > temp) {
+    temp = args[i];
+    maxIndex = i;
+  }
 }
 
 temp = -Infinity;
@@ -22,7 +25,8 @@ if (!args[2] || !args[3]) console.log(0);
 else {
   while (i < len) {
     if (args[i] <= args[maxIndex] && args[i] > temp && i !== maxIndex) {
-      temp = args[i], res = args[i];
+      temp = args[i];
+      res = args[i];
     }
     i++;
   }
