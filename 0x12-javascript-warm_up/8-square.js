@@ -6,7 +6,7 @@ if (isNaN(args)) console.log('Missing size');
 else {
   for (let height = 0; height < args; height++) {
     while (width < args) {
-      square += 'x';
+      square += 'X';
       width++;
     }
     console.log(square);
