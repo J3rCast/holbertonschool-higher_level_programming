@@ -10,7 +10,7 @@ module.exports = class Square extends Rectangle {
     let charToPrint = c;
     let width = '';
     let i = 0;
-    if (c == undefined) {
+    if (c === undefined) {
       charToPrint = 'X';
     }
     while (i < this.width) {
@@ -21,5 +21,4 @@ module.exports = class Square extends Rectangle {
       console.log(width);
     }
   }
-  
 };
