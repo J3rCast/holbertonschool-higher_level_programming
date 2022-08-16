@@ -4,6 +4,7 @@ module.exports = class Rectangle {
     if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
+      this.charToPrint = 'X';
     }
   }
 
@@ -11,7 +12,7 @@ module.exports = class Rectangle {
     let width = '';
     let i = 0;
     while (i < this.width) {
-      width += 'X';
+      width += this.charToPrint;
       i++;
     }
     for (i = 0; i < this.height; i++) {
