@@ -13,6 +13,5 @@ for (const [key, value] of Object.entries(dict)) {
   } else {
     newDict[value] = newList(key);
   }
-  console.log(key, value);
 }
 console.log(newDict);
