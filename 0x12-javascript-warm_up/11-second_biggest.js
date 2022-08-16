@@ -3,22 +3,21 @@ const args = process.argv;
 let i = 2;
 let res = 0;
 let maxIndex = 0;
-let temp = -Infinity;
+let temp = 0;
 const list = [];
 const len = args.length;
 
 for (i = 2; i < len; i++) {
   list.push(parseInt(args[i]));
 }
-
 for (i = 2; i < len; i++) {
-  if (args[i] > temp) {
-    temp = args[i];
+  if (parseInt(args[i]) > parseInt(temp)) {
+    temp = parseInt(args[i]);
     maxIndex = i;
   }
 }
 
-temp = -Infinity;
+temp = 0;
 i = 2;
 
 if (!args[2] || !args[3]) console.log(0);
@@ -30,5 +29,5 @@ else {
     }
     i++;
   }
-  console.log(parseInt(res));
+  console.log(res);
 }
