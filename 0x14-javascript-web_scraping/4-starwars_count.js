@@ -14,7 +14,4 @@ axios.get(link)
     }
     console.log(movieCount);
   }).catch(error => {
-    if (error.response) {
-      console.log(error);
-    }
   });
