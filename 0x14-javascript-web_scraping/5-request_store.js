@@ -1,19 +1,24 @@
 #!/usr/bin/node
 const axios = require('axios');
-const fs = require('fs');
 const { argv } = require('process');
 const link = argv[2];
-const path = argv[3];
 
 axios.get(link)
   .then(res => {
-    fs.appendFile(path, res.data, 'utf8', (err) => {
-      if (err) {
-        console.log(err);
+    let newDict = {};
+    let data = res.data;
+
+    for (let i = 0; i < data.length; i++) {
+      if (!(data[i].userId in newDict) && data[i].completed) {
+        newDict[data[i].userId] = 1;
+      } else if (data[i].userId in newDict && data[i].completed) {
+        newDict[data[i].userId] = newDict[data[i].userId] + 1;
       }
-    });
+    }
+
+    console.log(newDict);
   }).catch(error => {
     if (error.response) {
-      console.log(error.response.status);
+      console.log(error.response)
     }
   });
