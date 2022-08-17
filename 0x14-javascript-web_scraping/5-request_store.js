@@ -7,5 +7,13 @@ const path = argv[3];
 
 axios.get(link)
   .then(res => {
-    console.log(res.data);
+    fs.appendFile(path, res.data, 'utf8', (err) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+  }).catch(error => {
+    if (error.response) {
+      console.log(error.response.status);
+    }
   });
