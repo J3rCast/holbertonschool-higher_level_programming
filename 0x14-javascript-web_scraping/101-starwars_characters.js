@@ -8,8 +8,8 @@ axios.get(link)
     const characters = res.data.characters;
 
     for (let i = 0; i < characters.length; i++) {
-      let resp = await axios.get(characters[i])
-          console.log(resp.data.name);
+      const resp = await axios.get(characters[i]);
+      console.log(resp.data.name);
     }
   }).catch(error => {
     if (error.response) console.log(error.response);
