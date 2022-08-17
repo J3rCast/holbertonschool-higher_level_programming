@@ -7,5 +7,5 @@ const path = argv[3];
 
 axios.get(link)
   .then(res => {
-    console.log(res.body);
+    console.log(res.data);
   });
