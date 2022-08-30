@@ -17,7 +17,7 @@ if __name__ == "__main__":
     session = Session()
 
     query = session.query(State)
-    if query:
+    if query.first():
         print(f"{query.first().id}: {query.first().name}")
     else:
         print("Nothing")
