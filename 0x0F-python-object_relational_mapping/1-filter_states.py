@@ -12,7 +12,7 @@ import MySQLdb
 def main():
     db = MySQLdb.connect('localhost', argv[1], argv[2], argv[3])
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id;")
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id;")
     rows = cur.fetchall()
     for row in rows:
         print(row)
