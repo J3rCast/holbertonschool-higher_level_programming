@@ -6,13 +6,15 @@
 
 import urllib.request
 from urllib.parse import urlencode
+from urllib.error import HTTPError
 from sys import argv
 
 
 if __name__ == "__main__":
-    email = {"email": argv[2]}
-    data = urlencode(email).encode("utf-8")
-    req = urllib.request.Request(argv[1], data)
-    with urllib.request.urlopen(req) as response:
-        the_page = response.read()
-        print(the_page.decode("utf-8"))
+    req = urllib.request.Request(argv[1])
+    try:
+        with urllib.request.urlopen(req) as response:
+            the_page = response.read()
+            print(the_page.decode("utf-8"))
+    except HTTPError as error:
+        print("Error code: {}".format(error.status))
